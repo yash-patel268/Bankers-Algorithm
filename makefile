@@ -4,10 +4,10 @@ LFLAGS =
 LIBS = -lm -pthread
 SOURCES = main.c
 OBJECTS = $(subst .c,.o,$(SOURCES))
-EXE = sudoku
+EXE = main
 .PHONY: clean help
 
-sudoku : sudoku.c
+main : main.c
 	$(CC) $(CFLAGS) $^ $(LIBS) -o $@ 
 
 %.o : %.c
